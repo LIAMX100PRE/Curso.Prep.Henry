@@ -1,115 +1,82 @@
-// En estas primeras 6 preguntas, reemplaza `null` por la respuesta
-
-// Crea una variable "string", puede contener lo que quieras:
-const nuevaString = "hola";
-
-// Crea una variable numérica, puede ser cualquier número:
-const nuevoNum = 5;
-
-// Crea una variable booleana:
-const nuevoBool = false;
-
-// Resuelve el siguiente problema matemático:
-const nuevaResta = 10 - 5 === 5;
-
-// Resuelve el siguiente problema matemático:
-const nuevaMultiplicacion = 10 * 4 === 40 ;
-
-// Resuelve el siguiente problema matemático:
-const nuevoModulo = 21 % 5 === 1;
-
-
-// En los próximos 22 problemas, deberás completar la función.
-// Todo tu código irá dentro de las llaves de la función.
-// Asegúrate que usas "return" cuando la consola te lo pida.
-// Pista: "console.log()" NO fucionará.
 // No cambies los nombres de las funciones.
 
-function devolverString(str) {
-  // "Return" la string provista: str
+function crearGato(nombre, edad) {
+  // Crear un nuevo objeto con la propiedad "nombre" y el valor definido como el argumento "nombre".
+  // Agrega una propiedad al objeto con el nombre "edad" y usa el valor definido en el argumento "edad"
+  // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
+  // Devuelve el objeto
   // Tu código:
-  return str;
-}
+  var obj = {
+    nombre: nombre,
+    edad: edad,
+    meow: function() {
+      return 'meow!';
+    }
+  };
+  return obj;
 
-function suma(x, y) {
-  // "x" e "y" son números
-  // Suma "x" e "y" juntos y devuelve el valor
-  // Tu código:
-  return x + y;
-}
-
-function resta(x, y) {
-  // Resta "y" de "x" y devuelve el valor
-  // Tu código:
-  return x - y;
-}
-
-function multiplica(x, y) {
-  // Multiplica "x" por "y" y devuelve el valor
-  // Tu código:
-  return x * y;
-}
-
-function divide(x, y) {
-  // Divide "x" entre "y" y devuelve el valor
-  // Tu código:
-  return x / y;
-}
-
-function sonIguales(x, y) {
-  // Devuelve "true" si "x" e "y" son iguales
-  // De lo contrario, devuelve "false"
-  // Tu código:
-  if (x === y) {
-    return true;
-  } else {
-    return false;
-  }
 }
 
 
-function tienenMismaLongitud(str1, str2) {
-  // Devuelve "true" si las dos strings tienen la misma longitud
-  // De lo contrario, devuelve "false"
+function agregarPropiedad(objeto, property) {
+  // Agrega una propiedad al objeto (argumento "objeto") con el valor `null`
+  // Devuelve el objeto
+  // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
   // Tu código:
-  return str1.length === str2.length;
-}
-
-
-function menosQueNoventa(num) {
-  // Devuelve "true" si el argumento de la función "num" es menor que noventa
-  // De lo contrario, devuelve "false"
-  // Tu código:
-  if(num < 90) {
-    return true;
-  } else {
-    return false;
-  }
+  objeto[property] = null;
+  return objeto;
 
 }
 
-function mayorQueCincuenta(num) {
-  // Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
-  // De lo contrario, devuelve "false"
+function invocarMetodo(objeto, metodo) {
+  // "metodo" es una cadena que contiene el nombre de un método (funcion) en el objeto
+  // Invoca ese método
+  // Nada necesita ser devuelto ("returned")
   // Tu código:
-  if(nu > 50) {
-    return true;
-  } else {
-    return false;
-  }
+  objeto[metodo]();
 }
 
-function obtenerResto(x, y) {
-  // Obten el resto de la división de "x" entre "y"
+function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
+  // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
+  // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-  return x % y;
+  var result = objetoMisterioso.numeroMisterioso * 5;
+
+  return result;
+
 }
 
-function esPar(num) {
-  // Devuelve "true" si "num" es par
-  // De lo contrario, devuelve "false"
+function eliminarPropiedad(objeto, unaPropiedad) {
+  // Elimina la propiedad de objeto cuyo nombre está pasado por el parametro unaPropiedad 
+  // tip: tenes que usar bracket notation
+  // Devuelve el objeto
   // Tu código:
-  if( num % 2 === 0) {
+  delete objeto[unaPropiedad];
+
+  return objeto;
+
+}
+
+function nuevoUsuario(nombre, email, password) {
+  // Crea un nuevo objeto con las propiedades coincidiendo con los argumentos que se pasan a la función
+  // Devuelve el objeto
+  // Tu código:
+  var obj = {
+    nombre: nombre,
+    email: email,
+    password: password
+  };
+
+  return obj;
+
+
+}
+
+function tieneEmail(usuario) {
+  // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
+  // De lo contratio, devuelve "false"
+  // Tu código:
+  if(usuario['email']) {  
     return true;
   } else {
     return false;
@@ -117,183 +84,111 @@ function esPar(num) {
 
 }
 
-function esImpar(num) {
-  // Devuelve "true" si "num" es impar
+
+
+function tienePropiedad(objeto, propiedad) {
+  // Devuelve "true" si el objeto (parámetro "objeto") tiene una propiedad (key) cuyo nombre es igual al valor del argumento "propiedad"
+  // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(num % 2 === 1) {
+  if(objeto[propiedad]) {
     return true;
   } else {
-    return false;
+      return false;
 
 }
 
-function elevarAlCuadrado(num) {
-  // Devuelve el valor de "num" elevado al cuadrado
-  // ojo: No es raiz cuadrada!
+function verificarPassword(usuario, password) {
+  // Comprueba si la "password" enviada coincide con la propiedad "password" del objeto "usuario"
+  // Devuelve "true" si coinciden
+  // De lo contrario, devuelve "false"
+  // // Tu código:
+  return usuario['password'] === password;
+}
+
+function actualizarPassword(usuario, nuevaPassword) {
+  // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevagPassword"
+  // Devuelve el objeto
   // Tu código:
-  return math.pow(num, 2);
+  usuario.password = nuevaPassword;
+  return usuario;
+
 }
 
-function elevarAlCubo(num) {
-  // Devuelve el valor de "num" elevado al cubo
+function agregarAmigo(usuario, nuevoAmigo) {
+  // "usuario" tiene una propiedad llamada "amigos" que es un array
+  // Agrega "nuevoAmigo" al final de ese array
+  // Devuelve el objeto "usuario"
+  // // Tu código:
+  usuario.amigos.push(nuevoamigo);
+
+  return usuario;
+
+}
+
+function pasarUsuarioAPremium(usuarios) {
+  // "usuarios" es un array de objetos "usuario"
+  // Cada objeto "usuario" tiene la propiedad "esPremium"
+  // Define cada propiedad "esPremium" de cada objeto como "true"
+  // Devuelve el array de usuarios
   // Tu código:
-  return num * num * num;
-}
-
-function elevar(num, exponent) {
-  // Devuelve el valor de "num" elevado al exponente dado en "exponent"
-  // Tu código:
-  return math.pow(num, exponent);
-}
-
-function redondearNumero(num) {
-  // Redondea "num" al entero más próximo y devuélvelo
-  // Tu código:
-  var resto = num % 1;
-  var entero = num - resto;
-   if (resto >= 0.5) {
-  return entero + 1;
-  } else {
-    return entero;
-   }
-     return math.round(num);
-
-}
-
-function redondearHaciaArriba(num) {
-  // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
-  // Tu código:
-  return math.ceil(num);
-}
-
-function numeroRandom() {
-  //Generar un número al azar entre 0 y 1 y devolverlo
-  //Pista: investigá qué hace el método Math.random()
-  return math.random();
-}
-
-function esPositivo(numero) {
-  //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
-  //Si el número es positivo, devolver ---> "Es positivo"
-  //Si el número es negativo, devolver ---> "Es negativo"
-  //Si el número es 0, devuelve false
-  if(numero > 0) {
-    return "es positivo";
+  for(var i = 0; i < usuarios.length; i++) {
+    usuarios[i].espremium = true;
   }
-  else if(numero === 0) {
-    return false;
-  }else {
-    return "es negativo";
+  return usuarios;
+
+}
+
+function sumarLikesDeUsuario(usuario) {
+  // "usuario" tiene una propiedad llamada "posts" que es un array
+  // "posts" es un array de objetos "post"
+  // Cada objeto "post" tiene una propiedad llamada "likes" que es un entero (int/integer)
+  // Suma todos los likes de todos los objetos "post"
+  // Devuelve la suma
+  // Tu código:
+  var suma = 0;
+
+  for(var i = 0; i < usuario.posts.length; i++) {
+    suma = suma + usuario.posts[i].likes;
   }
 
+  return suma;
+
 }
 
-function agregarSimboloExclamacion(str) {
-  // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
-  // Ejemplo: "hello world" pasaría a ser "hello world!"
+function agregarMetodoCalculoDescuento(producto) {
+  // Agregar un método (función) al objeto "producto" llamado "calcularPrecioDescuento"
+  // Este método debe multiplicar el "precio" del "producto" ("producto.precio" o "producto[precio]") y "porcentajeDeDescuento" para obtener el descuento
+  // El método resta el descuento del precio y devuelve el precio con descuento
+  // Devuelve el objeto "producto" al final de la función
+  // Ejemplo:
+  // producto.precio -> 20
+  // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
+  // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
-  return str + '!';
-}
-
-function combinarNombres(nombre, apellido) {
-  // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
-  // Ejemplo: "Soy", "Henry" -> "Soy Henry"
-  // Tu código:
-  var combinado = "oscar" + "" + "velasquez";
-  return combinado;
+  producto.calcularpreciodescuento = function() {
+    return this.precio - ( this.precio * this.porcentajededescuento );
+  };
+  return producto;
 
 }
-
-function obtenerSaludo(nombre) {
-  // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
-  // "Martin" -> "Hola Martin!"
-  // Tu código:
-  return 'hola ' + 'oscar' + '!';
-}
-
-function obtenerAreaRectangulo(alto, ancho) {
-  // Retornar el area de un rectángulo teniendo su altura y ancho
-  // Tu código:
-  return alto * ancho;
-}
-
-
-function retornarPerimetro(lado){
-  //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
-  //Escribe tu código aquí
-  return lado * 4
-}
-
-
-function areaDelTriangulo(base, altura){
-  //Desarrolle una función que calcule el área de un triángulo.
-  //Escribe tu código aquí
-  return (base * altura)/2
-}
-
-
-function deEuroAdolar(euro){
-  //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
-  //como parámetro un número de euros y calcule el cambio en dólares.
-  //Escribe tu código aquí
-  return euro * 1.2
-}
-
-
-function esVocal(letra){
-  //Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”. 
-  //Verificar si el usuario ingresó un string de más de un carácter, en ese caso, informarle 
-  //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
-  // Si no es vocal, tambien debe devolver "Dato incorrecto".
-  //Escribe tu código aquí
-  if(letra.length > 1){
-    return "dato incorrecto"
-  }
-  if(letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
-    return "es vocal"
-  }
-  return "dato incorrecto"
-
-}
-
-
 
 // No modificar nada debajo de esta línea
 // --------------------------------
 
 module.exports = {
-  nuevaString,
-  nuevoNum,
-  nuevoBool,
-  nuevaResta,
-  nuevaMultiplicacion,
-  nuevoModulo,
-  devolverString,
-  tienenMismaLongitud,
-  sonIguales,
-  menosQueNoventa,
-  mayorQueCincuenta,
-  suma,
-  resta,
-  divide,
-  multiplica,
-  obtenerResto,
-  esPar,
-  esImpar,
-  elevarAlCuadrado,
-  elevarAlCubo,
-  elevar,
-  redondearNumero,
-  redondearHaciaArriba,
-  numeroRandom,
-  esPositivo,
-  agregarSimboloExclamacion,
-  combinarNombres,
-  obtenerSaludo,
-  obtenerAreaRectangulo,
-  retornarPerimetro,
-  areaDelTriangulo,
-  deEuroAdolar,
-  esVocal,
+  crearGato,
+  agregarPropiedad,
+  invocarMetodo,
+  multiplicarNumeroDesconocidoPorCinco,
+  eliminarPropiedad,
+  nuevoUsuario,
+  tieneEmail,
+  tienePropiedad,
+  verificarPassword,
+  actualizarPassword,
+  agregarAmigo,
+  pasarUsuarioAPremium,
+  sumarLikesDeUsuario,
+  agregarMetodoCalculoDescuento
 };
