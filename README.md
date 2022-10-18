@@ -1,145 +1,80 @@
-<p align='left'>
-    <img  src='../logo.png' height='70px'>
-</p>
-<table width="100%" style='table-layout:fixed;'>
-  <tr>
-    <td>
-      <a href="https://airtable.com/shrSzEYT4idEFGB8d?prefill_clase=04-JS-III">
-        <img src="https://static.thenounproject.com/png/204643-200.png" width="100"/>
-        <br>
-        Hacé click acá para dejar tu feedback sobre esta clase.
-      </a>
-    </td>
-  </tr>
-</table>
-# Lección 4: Javascript III (continuación de bucles `for` y Arrays)
+# Homework: HTML
 
-En esta lección cubriremos:
+Ahora que nos ha visto crear un archivo HTML y una hoja de estilo externa, crearas una propia.
 
-* Introducción a los arrays
-* Bucles `for` con arrays
+## Ejercicio I
 
-<iframe src="https://player.vimeo.com/video/424916422" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-
-## Introducción a los arrays (matrices/arreglos)
-
-En la lección anterior discutimos los 3 tipos de datos básicos (cadenas/strings, números y booleanos) y cómo asignar esos tipos de datos a las variables. Discutimos cómo una variable solo puede apuntar a una sola cadena, número o booleano. Sin embargo, en muchos casos queremos poder apuntar a una colección de tipos de datos. Por ejemplo, ¿qué pasaría si quisiéramos hacer un seguimiento del nombre de cada estudiante en esta clase usando una sola variable, `nombresEstudiantes`. Podemos hacer eso usando Arrays. Podemos pensar en las matrices como contenedores de almacenamiento para colecciones de datos. Construir una matriz es simple, declarar una variable y establecerla en []. Luego podemos agregar al contenedor (separadas por coma) tantas cadenas, números o booleanos como queramos y acceder a esos elementos cuando lo deseemos.
-
-```javascript
-const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
+Crear un nuevo archivo dentro de la carpeta `homework` llamado `homework.html` donde deberás realizar lo siguiente:
+```
+I. Cree una página HTML básica.
+  A. Cree el diseño básico para una página HTML usando html, head y body.
+  B. Agregue un elemento de título y asigne a su página el título de "Tarea HTML de [Su nombre]".
+  C. En el cuerpo, crea tres divs.
+    1. En el primer div crea:
+      * un elemento h1 que contiene [Tu nombre].
+      * un elemento h3 que contiene "Henry".
+      * un elemento h4 que contiene "tarea de HTML / CSS".
+    2. En el segundo div crea:
+      * un elemento span que contiene texto que describe su comida favorita.
+      * un elemento 'a' que se vincula a su restaurante favorito.
+    3. En el tercer div crea:
+      * una lista desordenada con dos elementos dentro de la lista
+      * una etiqueta img en cada elemento de la lista que se vincula a su comida favorita. (Use la búsqueda de imágenes de Google para encontrar una foto y copiar la dirección de la misma o sino puede usar esta: "https://i.picsum.photos/id/1080/400/200.jpg").
 ```
 
-### .length
-
-Al igual que el tipo de dato _String_ tiene un método incorporado `.length`, también lo hace la matriz. De hecho, la matriz tiene muchos métodos incorporados útiles (los discutiremos en lecciones posteriores). Al igual que la cadena `.length` cuenta los caracteres, la matriz` .length` devolverá el número de elementos en una matriz:
-
-```javascript
-const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
-
-console.log(nombresEstudiantes.length);  // 4
+```
+II Añade un poco de estilo
+  A. Agregue la etiqueta de estilo a su documento HTML.
+  B. Asignar al tercer div el id "thirdDiv".
+  C. Asignar a los otros divs la clase "divClass".
+  D. Asignar al span que se encuentra dentro de su segundo div el id "spanId".
+  E. Agregue una regla de estilo a su elemento h1 cambiando el color del texto (Listado de colores: https://www.crockford.com/wrrrld/color.html).
+  F. Agregue una regla de estilo al elemento img dándole un ancho de 400px.
+  G. Agregue una regla de estilo a 'thirdDiv' cambiando la altura a 600px y el ancho a 500px.
+  H. Agregue una regla de estilo a 'thirdDiv' cambiando el color de fondo por el que quiera.
+  I. Cambie el tamaño de la fuente para 'spanId' a 18px.
+  J. Asignar al id 'spanId' un margen de 50px.
+  K. Asignar al id 'thirdDiv' un relleno (padding) de 50px.
+  L. Asignar al id 'thirdDiv' un borde con cualquier ancho de color y estilo que elija.
 ```
 
-### Acceso a elementos en una matriz
-
-Podemos acceder a un elemento de una matriza en cualquier momento, solo necesitamos llamar al elemento por su posición en la matriz. Los elementos reciben una posición numérica (índice) de acuerdo con su ubicación en la matriz, en orden. El orden numérico de una matriz SIEMPRE comienza en 0, por lo que el primer elemento está en el índice 0, el segundo en el índice 1, el tercero en el 2, y así sucesivamente (esto puede ser complicado al principio, pero solo recuerda que las matrices siempre comienzan en 0).
-
-```javascript
-const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
-                                0         1        2        3
+```
+III. Cree una hoja de estilo externa y mueva todas las reglas de estilo anteriores a la nueva hoja de estilo.
+  A. Cree un archivo llamado styles.css en esta carpeta.
+  B. COPIE todas sus reglas de estilo en este nuevo archivo.
+  C. Agregue una etiqueta de enlace a su html que importe su nuevo archivo css.
 ```
 
-Para acceder al elemento, escribiremos el nombre o la variable de matriz, seguidos de corchetes que contienen la asignación numérica.
-
-```javascript
-const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
-
-console.log(nombresEstudiantes[1]);  // 'Antonio'
+```
+IV. Suba su trabajo a su repositorio de github`
 ```
 
-Para acceder dinámicamente al último elemento de la matriz, utilizaremos el método `.length`. En nuestra matriz `nombresEstudiantes`, la longitud es 4. Sabemos que el primer elemento siempre será 0, y cada elemento posterior se desplaza sobre un número. Entonces, en nuestro ejemplo, el último elemento tiene un índice de 3. Usando nuestra propiedad de longitud mostraremos cómo se hace cuando no sabemos el número de elementos en una matriz:
+### Crédito adicional:
+>   Para hacer los extra credits, generalmente será necesario que investigue algunas cosas por su cuenta en Internet.
 
-```javascript
-const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', ... ,'Samuel'];
+  * Establecer una imagen como fondo de toda la página
+  * Centrar los div en la página
+  * Centrar todos los elementos en la página
+  * [Lea sobre el posicionamiento y use la regla de posición en sus estilos](https://es.learnlayout.com/index.html)
+  * Lea sobre flexbox y use flexbox para centrar todos los elementos en la página
 
-console.log(nombresEstudiantes[nombresEstudiantes.length - 1]);  // 'Samuel'
+## Ejercicio II
+
+```
+Usando lo que aprendiste de HTML vas a crear un nuevo documento dentro de la carpeta de 'homework' llamado 'cv.html'. En el mismo vas crear tu propio Curriculum, deberá tener las siguientes secciones:
+
+* Titulo
+* Descripción Personal
+* Educación
+* Experiencias Laborales
+* Skills
+* Tu foto
+* Hobbies
+
+Además agregá una sección más donde expliques por qué estás estudiando esta carrera y cuáles son tus expectativas al finalizar la carrera.
+
+Subir también este archivo a su repositorio de github
+
 ```
 
-### Asignación
-
-Podemos asignar y reasignar cualquier índice en la matriz usando el paréntesis/índice y un "=".
-
-```javascript
-const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
-
-nombresEstudiantes[0] = 'Jorge';
-
-console.log(nombresEstudiantes);  // ['Jorge', 'Antonio', 'Sara', 'Samuel']
-```
-### `.push` y `.pop`
-
-Otros dos métodos de matriz incorporados muy útiles son `.push` y` .pop`. Estos métodos se refieren a la adición y eliminación de elementos de la matriz después de su declaración inicial.
-
-`.push` agrega un elemento al final de la matriz, incrementando su longitud en 1. `.push` devuelve la nueva longitud.
-
-```javascript
-const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
-
-nombresEstudiantes.push('Patricia');
-
-console.log(nombresEstudiantes);  // ['Martin', 'Antonio', 'Sara', 'Samuel', 'Patricia']
-```
-
-`.pop` elimina el último elemento de la matriz, disminuyendo la longitud en 1. `.pop` devuelve el elemento "reventado" (_popped_).
-
-```javascript
-const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
-
-nombresEstudiantes.pop();
-
-console.log(nombresEstudiantes);  // ['Martin', 'Antonio', 'Sara']
-```
-
-### `.unshift` y `.shift`
-
-`.unshift` y` .shift` son exactamente como `.push` y` .pop`, excepto que operan en el primer elemento de la matriz. `.unshift(item)` colocará un nuevo elemento en la primera posición de la matriz, y `.shift()` eliminará el primer elemento de la matriz.
-
-```javascript
-const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
-
-nombresEstudiantes.unshift('Leo');
-
-console.log(nombresEstudiantes);  // ['Leo', 'Martin', 'Antonio', 'Sara', 'Samuel']
-
-nombresEstudiantes.shift();
-
-console.log(nombresEstudiantes);  // ['Martin', 'Antonio', 'Sara', 'Samuel']
-```
-
-### Notas sobre las matrices
-
-Debido a que Javascript no es un lenguaje fuertemente tipado, las matrices tampoco necesitan ser tipadas. Las matrices en Javascript pueden contener múltiples tipos de datos diferentes en la misma matriz
-
-## Utilizando bucles `for` en arrays
-
-La mayoría de las veces, los bucles for se utilizan para iterar sobre todos los elementos de una matriz. Usando la técnica de acceso al índice ("index access technique") podemos acceder a cada elemento de la matriz. Para hacer esto, usamos el método `.length` como punto de parada para el ciclo.
-
-```javascript
-const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
-
-for (let i = 0; i < nombresEstudiantes.length; i++) {
-    console.log(nombresEstudiantes[i]);
-}
-
-// 'Martin'
-// 'Antonio'
-// 'Sara'
-// 'Samuel'
-```
-
-## Abre la carpeta "homework" y completa la tarea descrita en el archivo README
-[Homework](https://github.com/atralice/Curso.Prep.Henry/tree/master/04-JS-III/homework)
-
-## Recursos adicionales
-
-* [MDN: Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
-* [MDN: for Loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
+> Para este ejercicio vos vas a tener que elegir que **tags** html usar para darle la mejor estructuración al html. Acordate que en el futuro vamos a ver más en profundidad los estilos CSS, por lo que por ahora no te preocupes tanto del layout más allá de las reglas básicas.
